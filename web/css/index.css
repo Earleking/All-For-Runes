@@ -1,0 +1,100 @@
+body {
+    background-color: #231a01;
+    /* background: url("./../../static/images/Adirondack\ Mountains.jpg"); */
+}
+
+.new-rune-button {
+    color: white;
+    font-size: x-large;
+    padding: 10px;
+    transition: .4s;
+}
+
+.new-rune-button:hover {
+    background-color: darkgray;
+    cursor: pointer;
+    /* color: black; */
+}
+
+.new-rune-container {
+    padding: 10px;
+}
+
+.current-rune-container {
+    color: white;
+}
+
+.runes-title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: none;
+    padding-left: 5%;
+    padding-bottom: 15px;
+}
+
+.rune-entry:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px white;
+}
+
+.rune-entry {
+    position: relative;
+    border: white 1px solid;
+    padding: 20px;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.champion-icon {
+    position: relative;
+    grid-area: a;
+}
+
+.keystone-icon {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    display: inline-block;
+    grid-area: b;
+    margin: auto;
+}
+
+.secondary-icon {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    grid-area: c;
+    margin: auto;
+}
+
+.rune-grid {
+    display: grid;
+    grid-template-columns: 100px 75px;
+    justify-content: space-evenly;
+    grid-template-areas: 'a b' 'a c'
+}
+
+.rune-entries {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 200px);
+    justify-content: space-evenly;
+}
+
+.rune-name {
+    text-align: center;
+    font-size: 25px;
+}
+
+.project-glass {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: inherit;
+    /* background-image: url("./../../static/images/Adirondack\ Mountains.jpg"); */
+    filter: blur(5px);
+    
+}

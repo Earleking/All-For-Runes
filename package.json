@@ -1,0 +1,16 @@
+{
+  "name": "all-for-runes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "start": "electron .",
+    "download": "node utility_functions/downloadRuneIcons.js"
+  },
+  "author": "Arek Fielding",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^3.0.9"
+  }
+}
