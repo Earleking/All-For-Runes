@@ -1,0 +1,34 @@
+.title {
+    text-align: center;
+}
+
+.runes {
+    min-height: 500px;
+}
+
+.runes {
+    display: grid;
+    grid-template-columns: auto auto;
+    height: 100%;
+}
+
+.rune-slot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 100px);
+    justify-content: space-evenly;
+    height: 100px;
+}
+
+.rune {
+    filter: grayscale(1);
+}
+
+.selected {
+    filter: grayscale(0);
+}
+
+
+img {
+    width: 100%;
+    height: 100%;
+}
