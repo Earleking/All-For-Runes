@@ -23,6 +23,10 @@
     filter: grayscale(1);
 }
 
+.rune:hover {
+    cursor: pointer;
+}
+
 .selected {
     filter: grayscale(0);
 }
@@ -31,4 +35,11 @@
 img {
     width: 100%;
     height: 100%;
+}
+
+.sub-rune {
+    width: 70%;
+    height: 70%;
+    margin: auto;
+    display: block;
 }
