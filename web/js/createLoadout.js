@@ -57,6 +57,29 @@ function selectNewRune(newId) {
     document.getElementById(oldRune).classList.remove("selected");
 }
 
+function clearAllRunes() {
+    clearPrimaryRunes();
+    clearSecondaryRunes();
+}
+
+function clearPrimaryRunes() {
+    for(var i = 0; i <=3 ; i++) {
+        var row = document.getElementById(i + "-slot");
+        while(row.firstChild) {
+            row.removeChild(row.firstChild);
+        }
+    }
+}
+
+function clearSecondaryRunes() {
+    for(var i = 1; i <=3 ; i++) {
+        var row = document.getElementById(i + "-slot-1");
+        while(row.firstChild) {
+            row.removeChild(row.firstChild);
+        }
+    }
+}
+
 $(document).ready(() => {
     $.getJSON("./../../static/json/runes.json", (json) => {
         curRunes.allRunes = json;
