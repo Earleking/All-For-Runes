@@ -1,6 +1,7 @@
 class runesSeleted {
     constructor() {
         this.allRunes = {};
+        this.runesList = {};
         this.primaryTree = 0;
         this.secondaryTree = 0;
         this.firstSecondary = 0;
@@ -15,6 +16,17 @@ class runesSeleted {
             "2": 0,
             "3": 0
         }
+    }
+
+    sortRunes() {
+        for(var tree of this.allRunes) {
+            for(var slot of tree["slots"]) {
+                for(var rune of slot["runes"]) {
+                    this.runesList[rune["id"]] = rune;
+                }
+            }
+        }
+        // console.log(this.runesList);
     }
 
     fullSecondary() {
@@ -96,5 +108,29 @@ class runesSeleted {
                 }
             }
         }
+    }
+
+    resetPrimaryRunes() {
+        this.primaryRunes = {
+            "0": 0,
+            "1": 0,
+            "2": 0,
+            "3": 0
+        }
+    }
+    
+    resetSecondaryRunes() {
+        this.secondaryRunes = {
+            "1": 0,
+            "2": 0,
+            "3": 0
+        }
+    }
+
+    getRuneDescription(runeId) {
+        if(this.runesList[runeId]) {
+            return this.runesList[runeId]["shortDesc"];
+        }
+        return "Not Found";
     }
 }
