@@ -4,19 +4,20 @@
 
 .runes {
     min-height: 500px;
+    margin: 0 50px;
 }
 
 .runes {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% auto;
     height: 100%;
 }
 
 .rune-slot {
     display: grid;
-    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-columns: repeat(auto-fit, 75px);
     justify-content: space-evenly;
-    height: 100px;
+    height: 75px;
 }
 
 .rune {
@@ -27,8 +28,26 @@
     cursor: pointer;
 }
 
+.tree-slot {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 50px);
+    justify-content: space-evenly;
+    height: 50px;
+}
+
+.path {
+    filter: grayscale(1);
+}
+
+.path:hover {
+    cursor: pointer;
+}
+
 .selected {
     filter: grayscale(0);
+    /* box-shadow: 0 0 10px blue;
+    background-color: blue; */
+
 }
 
 
@@ -43,3 +62,14 @@ img {
     margin: auto;
     display: block;
 }
+
+.tooltip {
+    position: absolute;
+    background-color: white;
+    max-width: 200px;
+    border: 1px black solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
