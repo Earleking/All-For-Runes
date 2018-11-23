@@ -1,0 +1,15 @@
+{
+    "stats": {
+        "5001": "Scaling Health (15-90 HP, lvls 1-18)",
+        "5002": "Armor (5 Armor)",
+        "5003": "Magic Resist (6 MR)",
+        "5005": " Attack Speed (9% Attack Speed)",
+        "5007": "Scaling Cooldown Reduction (1-10% CDR, lvls 1-18)",
+        "5008": "Adaptive Force (6 AD or 10 AP)"
+    },
+    "slots": [
+        [5008, 5005, 5007],
+        [5008, 5002, 5003],
+        [5001, 5002, 5003]
+    ]
+}

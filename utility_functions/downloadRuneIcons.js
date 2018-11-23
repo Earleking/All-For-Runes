@@ -2,7 +2,7 @@ var fs = require('fs'),
 request = require('request');
 
 const runes = require("../static/json/runes.json");
-
+const stats = require("../static/json/statShards.json");
 
 var download = function(uri, filename, callback){
   request.head(uri, function(err, res, body){
@@ -27,3 +27,10 @@ for(var tree of runes) {
     }
 }
 
+for(var slot of stats["slots"]) {
+    for(var shard of slot) {
+        download(`http://opgg-static.akamaized.net/images/lol/perkShard/${shard}.png`, `./static/runes/stats/${shard}.png`, () => {
+
+        });
+    }
+}
