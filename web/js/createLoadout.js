@@ -9,7 +9,7 @@ function loadTreeIcons() {
         img.src = url;
         img.id = tree["id"] + "-0";
         img.classList.add("path");
-        document.getElementById("0-path").appendChild(img); 
+        document.getElementById("path-0").appendChild(img); 
 
 
         // Secondary tree stuff
@@ -17,7 +17,7 @@ function loadTreeIcons() {
         img2.src = url;
         img2.id = tree["id"] + "-1";
         img2.classList.add("path");
-        document.getElementById("1-path").appendChild(img2); 
+        document.getElementById("path-1").appendChild(img2); 
 
     }
 }
@@ -59,7 +59,7 @@ function loadLevel(slot, i, primaryTree) {
     if(primaryTree) {
         treeID = "";
     }
-    var master = document.getElementById(`${i}-slot${treeID}`);
+    var master = document.getElementById(`slot-${i}${treeID}`);
     for(var rune of slot) {
         var img = document.createElement("img");
         img.src = runePath + rune["id"] + ".png";
@@ -139,7 +139,7 @@ function clearAllRunes() {
 function clearPrimaryRunes() {
     curRunes.resetPrimaryRunes();
     for(var i = 0; i <=3 ; i++) {
-        var row = document.getElementById(i + "-slot");
+        var row = document.getElementById("slot-" + i);
         while(row.firstChild) {
             row.removeChild(row.firstChild);
         }
@@ -149,7 +149,7 @@ function clearPrimaryRunes() {
 function clearSecondaryRunes() {
     curRunes.resetSecondaryRunes();
     for(var i = 1; i <=3 ; i++) {
-        var row = document.getElementById(i + "-slot-1");
+        var row = document.getElementById(`slot-${i}-1`);
         while(row.firstChild) {
             row.removeChild(row.firstChild);
         }
