@@ -15,12 +15,12 @@ var download = function(uri, filename, callback){
 
 // Thanks Stelar
 for(var tree of runes) {
-    download(`http://stelar7.no/cdragon/latest/perkstyles/${tree["id"]}.png`, `./static/runes/styles/${tree["id"]}.png`, function(){
+    download(`http://opgg-static.akamaized.net/images/lol/perkStyle/${tree["id"]}.png`, `./static/runes/styles/${tree["id"]}.png`, function(){
     
     });
     for(var slot of tree["slots"]) {
         for(var rune of slot["runes"]) {
-            download(`http://stelar7.no/cdragon/latest/perks/${rune["id"]}.png`, `./static/runes/perks/${rune["id"]}.png`, function(){
+            download(`http://opgg-static.akamaized.net/images/lol/perk/${rune["id"]}.png`, `./static/runes/perks/${rune["id"]}.png`, function(){
     
             });
         }
